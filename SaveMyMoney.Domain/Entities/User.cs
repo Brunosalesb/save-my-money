@@ -1,20 +1,21 @@
-﻿using System.Text;
+﻿using SaveMyMoney.Domain.ValueObjects;
+using System.Text;
 
 namespace SaveMyMoney.Domain.Entities
 {
     public class User
     {
         protected User() { }
-        public User(string email, string username, string password)
+        public User(string email, Name name, string password)
         {
             Email = email;
-            Username = EncryptPassword(username);
-            Password = password; 
+            Name = name;
+            Password = EncryptPassword(password); 
         }
 
         public int Id { get; private set; }
         public string Email { get; private set; }
-        public string Username { get; private set; }
+        public Name Name { get; private set; }
         public string Password { get; private set; }
 
         private string EncryptPassword(string pass)
