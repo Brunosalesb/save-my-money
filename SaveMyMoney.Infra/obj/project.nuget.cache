@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "yz6vI9o7U6IYt1V0LryTLoV05MuhjMEbHFS8VsGAXZhIAn1umSpfs9C6HGka83DuVRBT/6puKZwumCECwLvnkg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\bruno\\Documents\\Projetos\\SaveMyMoney\\SaveMyMoney.Infra\\SaveMyMoney.Infra.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\bruno\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\bruno\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
