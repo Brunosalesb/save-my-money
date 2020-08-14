@@ -7,8 +7,6 @@ namespace SaveMyMoney.Infra.Contexts
 {
     public class SaveMyMoneyDataContext : DbContext
     {
-        //here so i can use migration
-        public SaveMyMoneyDataContext() { }
         public SaveMyMoneyDataContext(DbContextOptions<SaveMyMoneyDataContext> options) : base(options) { }
 
         public DbSet<User> Users { get; set; }
