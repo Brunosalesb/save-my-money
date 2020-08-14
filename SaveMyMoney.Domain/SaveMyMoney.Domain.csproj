@@ -8,7 +8,6 @@
     <Folder Include="Commands\Inputs\" />
     <Folder Include="Commands\Handlers\" />
     <Folder Include="Commands\Results\" />
-    <Folder Include="Entities\" />
     <Folder Include="Repos\" />
   </ItemGroup>
 
