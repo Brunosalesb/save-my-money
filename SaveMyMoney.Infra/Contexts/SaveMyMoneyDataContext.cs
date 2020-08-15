@@ -11,10 +11,6 @@ namespace SaveMyMoney.Infra.Contexts
 
         public DbSet<User> Users { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer(@"Server=.\sqlexpress;Database=SaveMyMoney;Integrated Security=True");
-        }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new UserMap());

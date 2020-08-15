@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace SaveMyMoney.Infra.Migrations
 {
@@ -15,7 +16,8 @@ namespace SaveMyMoney.Infra.Migrations
                     Email = table.Column<string>(maxLength: 50, nullable: false),
                     FirstName = table.Column<string>(maxLength: 32, nullable: true),
                     LastName = table.Column<string>(maxLength: 32, nullable: true),
-                    Password = table.Column<string>(maxLength: 32, nullable: false)
+                    Password = table.Column<string>(maxLength: 32, nullable: false),
+                    SignUpDate = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
