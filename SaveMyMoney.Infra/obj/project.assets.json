@@ -1720,11 +1720,24 @@
       "SaveMyMoney.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "SaveMyMoney.Shared": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/SaveMyMoney.Domain.dll": {}
         },
         "runtime": {
           "bin/placeholder/SaveMyMoney.Domain.dll": {}
+        }
+      },
+      "SaveMyMoney.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/SaveMyMoney.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SaveMyMoney.Shared.dll": {}
         }
       }
     }
@@ -6298,6 +6311,11 @@
       "type": "project",
       "path": "../SaveMyMoney.Domain/SaveMyMoney.Domain.csproj",
       "msbuildProject": "../SaveMyMoney.Domain/SaveMyMoney.Domain.csproj"
+    },
+    "SaveMyMoney.Shared/1.0.0": {
+      "type": "project",
+      "path": "../SaveMyMoney.Shared/SaveMyMoney.Shared.csproj",
+      "msbuildProject": "../SaveMyMoney.Shared/SaveMyMoney.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {

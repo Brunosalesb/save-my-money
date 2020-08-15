@@ -10,3 +10,5 @@ C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Infra\bin\Debug\netsta
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Infra\bin\Debug\netstandard2.0\SaveMyMoney.Domain.pdb
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Infra\obj\Debug\netstandard2.0\SaveMyMoney.Infra.csproj.CopyComplete
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Infra\obj\Debug\netstandard2.0\SaveMyMoney.Infra.csproj.CoreCompileInputs.cache
+C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Infra\bin\Debug\netstandard2.0\SaveMyMoney.Shared.dll
+C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Infra\bin\Debug\netstandard2.0\SaveMyMoney.Shared.pdb

@@ -1262,8 +1262,16 @@
         }
       },
       "SaveMyMoney.Domain/1.0.0": {
+        "dependencies": {
+          "SaveMyMoney.Shared": "1.0.0"
+        },
         "runtime": {
           "SaveMyMoney.Domain.dll": {}
+        }
+      },
+      "SaveMyMoney.Shared/1.0.0": {
+        "runtime": {
+          "SaveMyMoney.Shared.dll": {}
         }
       }
     }
@@ -2073,6 +2081,11 @@
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
     "SaveMyMoney.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SaveMyMoney.Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

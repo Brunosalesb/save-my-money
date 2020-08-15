@@ -5,10 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\Inputs\" />
     <Folder Include="Commands\Handlers\" />
-    <Folder Include="Commands\Results\" />
-    <Folder Include="Repos\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SaveMyMoney.Shared\SaveMyMoney.Shared.csproj" />
   </ItemGroup>
 
 </Project>

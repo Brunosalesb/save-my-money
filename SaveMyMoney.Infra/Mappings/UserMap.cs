@@ -10,8 +10,8 @@ namespace SaveMyMoney.Infra.Mappings
         {
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Email).IsRequired().HasMaxLength(50);
-            builder.Property(x => x.Name.FirstName).IsRequired().HasColumnName("FirstName").HasMaxLength(32);
-            builder.Property(x => x.Name.LastName).IsRequired().HasColumnName("LastName").HasMaxLength(32);
+            builder.OwnsOne(x => x.Name).Property(x=>x.FirstName).IsRequired().HasColumnName("FirstName").HasMaxLength(32);
+            builder.OwnsOne(x => x.Name).Property(x => x.LastName).IsRequired().HasColumnName("LastName").HasMaxLength(32);
             builder.Property(x => x.Password).IsRequired().HasMaxLength(32);
         }
     }

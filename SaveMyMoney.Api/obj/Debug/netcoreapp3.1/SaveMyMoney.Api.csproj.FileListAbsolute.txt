@@ -35,8 +35,6 @@ C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\bin\Debug\netcorea
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
-C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\obj\Debug\netcoreapp3.1\SaveMyMoney.Api.csproj.CoreCompileInputs.cache
-C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\obj\Debug\netcoreapp3.1\SaveMyMoney.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\obj\Debug\netcoreapp3.1\SaveMyMoney.Api.csproj.CopyComplete
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
@@ -63,3 +61,8 @@ C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\bin\Debug\netcorea
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\bin\Debug\netcoreapp3.1\SaveMyMoney.Infra.dll
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\bin\Debug\netcoreapp3.1\SaveMyMoney.Infra.pdb
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\bin\Debug\netcoreapp3.1\SaveMyMoney.Domain.pdb
+C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\obj\Debug\netcoreapp3.1\SaveMyMoney.Api.csproj.CoreCompileInputs.cache
+C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\obj\Debug\netcoreapp3.1\SaveMyMoney.Api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\bin\Debug\netcoreapp3.1\SaveMyMoney.Shared.dll
+C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\bin\Debug\netcoreapp3.1\SaveMyMoney.Shared.pdb
