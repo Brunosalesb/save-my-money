@@ -22,7 +22,6 @@ namespace SaveMyMoney.Api
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCors();
             services.AddControllers();
 
             var key = Encoding.ASCII.GetBytes("fedaf7d8863b48e197b9287d492b708e");
@@ -67,11 +66,9 @@ namespace SaveMyMoney.Api
                 .AllowAnyMethod()
                 .AllowAnyHeader());
 
-
-
             app.UseAuthentication();
-            //not using Roles
-            //app.UseAuthorization();
+            
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

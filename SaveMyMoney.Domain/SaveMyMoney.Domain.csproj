@@ -5,7 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\Handlers\" />
+    <Folder Include="Commands\Responses\" />
+    <Folder Include="Handlers\" />
   </ItemGroup>
 
   <ItemGroup>
