@@ -12,9 +12,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
+using SaveMyMoney.Domain.Handlers;
 using SaveMyMoney.Domain.Repos;
+using SaveMyMoney.Domain.Transactions;
 using SaveMyMoney.Infra.Contexts;
 using SaveMyMoney.Infra.Repos;
+using SaveMyMoney.Infra.Transactions;
 
 namespace SaveMyMoney.Api
 {
@@ -57,6 +60,8 @@ namespace SaveMyMoney.Api
 
 
             services.AddTransient<IUserRepo, UserRepo>();
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
+            services.AddTransient<ICreateUserHandler, CreateUserHandler>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

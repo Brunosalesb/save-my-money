@@ -1,4 +1,4 @@
-﻿namespace SaveMyMoney.Infra.Transactions
+﻿namespace SaveMyMoney.Domain.Transactions
 {
     public interface IUnitOfWork
     {

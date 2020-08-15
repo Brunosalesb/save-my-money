@@ -8,9 +8,8 @@ namespace SaveMyMoney.Domain.Entities
     {
 
         protected User() { }
-        public User(int id, string email, Name name, string password)
+        public User(string email, Name name, string password)
         {
-            Id = id;
             Email = email;
             Name = name;
             Password = EncryptPassword(password);

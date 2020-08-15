@@ -16,6 +16,11 @@ namespace SaveMyMoney.Infra.Repos
             _context = context;
         }
 
+        public void CreateUser(User user)
+        {
+            _context.Users.Add(user);
+        }
+
         public User Get(string email, string password)
         {
             return _context.Users.FirstOrDefault(x => x.Email == email && x.Password == password);

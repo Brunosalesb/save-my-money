@@ -1,20 +1,25 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SaveMyMoney.Api.Services;
 using SaveMyMoney.Domain.Commands.Requests;
+using SaveMyMoney.Domain.Handlers;
 using SaveMyMoney.Domain.Repos;
+using System.Text;
 
 namespace SaveMyMoney.Api.Controllers
 {
     [ApiController]
-    [Route("login")]
+    [Route("user")]
     public class UserController : ControllerBase
     {
         private readonly IUserRepo _repo;
-        public UserController(IUserRepo repo)
+        private readonly ICreateUserHandler _handle;
+        public UserController(IUserRepo repo, ICreateUserHandler handle)
         {
             _repo = repo;
+            _handle = handle;
         }
 
+        [Route("login")]
         [HttpPost]
         public IActionResult Authenticate([FromBody]AuthenticateUserRequest req)
         {
@@ -26,6 +31,14 @@ namespace SaveMyMoney.Api.Controllers
             var token = TokenService.GenerateToken(user);
 
             return Ok(new { user = user.Name.ToString(), token = token });
+        }
+
+        [Route("teste")]
+        [HttpPost]
+        public IActionResult Teste([FromBody] CreateUserRequest req)
+        {
+            var response = _handle.Handle(req);
+            return Ok(response);
         }
     }
 }

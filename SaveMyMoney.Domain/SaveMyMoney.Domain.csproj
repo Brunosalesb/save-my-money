@@ -5,11 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\Responses\" />
-    <Folder Include="Handlers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\SaveMyMoney.Shared\SaveMyMoney.Shared.csproj" />
   </ItemGroup>
 

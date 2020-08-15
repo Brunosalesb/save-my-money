@@ -1,19 +1,20 @@
-﻿using System;
+﻿using SaveMyMoney.Domain.Transactions;
+using SaveMyMoney.Infra.Contexts;
 
 namespace SaveMyMoney.Infra.Transactions
 {
     public class UnitOfWork : IUnitOfWork
     {
-        //private readonly DataContext _context;
+        private readonly SaveMyMoneyDataContext _context;
 
-        //public UnitOfWork(DataContext context)
-        //{
-        //    _context = context;
-        //}
+        public UnitOfWork(SaveMyMoneyDataContext context)
+        {
+            _context = context;
+        }
 
         public void Commit()
         {
-            //_context.SaveChanges();
+            _context.SaveChanges();
         }
 
         public void Rollback()
