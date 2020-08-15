@@ -13,7 +13,7 @@ namespace SaveMyMoney.Infra.Mappings
             builder.OwnsOne(x => x.Name).Property(x=>x.FirstName).IsRequired().HasColumnName("FirstName").HasMaxLength(32);
             builder.OwnsOne(x => x.Name).Property(x => x.LastName).IsRequired().HasColumnName("LastName").HasMaxLength(32);
             builder.Property(x => x.Password).IsRequired().HasMaxLength(32);
-            builder.Property(x => x.SignUpDate).IsRequired();
+            builder.Property(x => x.RegisterDate).IsRequired();
         }
     }
 }

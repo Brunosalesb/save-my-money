@@ -10,20 +10,10 @@ namespace SaveMyMoney.Infra.Repos
 {
     public class UserRepo : IUserRepo
     {
-        private readonly SaveMyMoneyDataContext _context;
-        public UserRepo(SaveMyMoneyDataContext context)
+        private readonly DataContext _context;
+        public UserRepo(DataContext context)
         {
             _context = context;
-        }
-
-        public void CreateUser(User user)
-        {
-            _context.Users.Add(user);
-        }
-
-        public User Get(string email, string password)
-        {
-            return _context.Users.FirstOrDefault(x => x.Email == email && x.Password == password);
         }
     }
 }

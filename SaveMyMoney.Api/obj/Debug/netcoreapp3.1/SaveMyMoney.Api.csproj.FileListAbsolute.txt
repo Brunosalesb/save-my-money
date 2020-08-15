@@ -1,3 +1,8 @@
+C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\obj\Debug\netcoreapp3.1\SaveMyMoney.Api.csprojAssemblyReference.cache
+C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\obj\Debug\netcoreapp3.1\SaveMyMoney.Api.AssemblyInfoInputs.cache
+C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\obj\Debug\netcoreapp3.1\SaveMyMoney.Api.AssemblyInfo.cs
+C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\obj\Debug\netcoreapp3.1\SaveMyMoney.Api.csproj.CoreCompileInputs.cache
+C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\obj\Debug\netcoreapp3.1\SaveMyMoney.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -8,6 +13,8 @@ C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\bin\Debug\netcorea
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\bin\Debug\netcoreapp3.1\SaveMyMoney.Api.dll
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\bin\Debug\netcoreapp3.1\SaveMyMoney.Api.pdb
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
@@ -34,6 +41,7 @@ C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\bin\Debug\netcorea
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
@@ -54,11 +62,6 @@ C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\bin\Debug\netcorea
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\bin\Debug\netcoreapp3.1\SaveMyMoney.Infra.pdb
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\bin\Debug\netcoreapp3.1\SaveMyMoney.Domain.pdb
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\bin\Debug\netcoreapp3.1\SaveMyMoney.Shared.pdb
-C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\obj\Debug\netcoreapp3.1\SaveMyMoney.Api.csprojAssemblyReference.cache
-C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\obj\Debug\netcoreapp3.1\SaveMyMoney.Api.AssemblyInfoInputs.cache
-C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\obj\Debug\netcoreapp3.1\SaveMyMoney.Api.AssemblyInfo.cs
-C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\obj\Debug\netcoreapp3.1\SaveMyMoney.Api.csproj.CoreCompileInputs.cache
-C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\obj\Debug\netcoreapp3.1\SaveMyMoney.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\obj\Debug\netcoreapp3.1\SaveMyMoney.Api.RazorTargetAssemblyInfo.cache
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\obj\Debug\netcoreapp3.1\SaveMyMoney.Api.csproj.CopyComplete
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Api\obj\Debug\netcoreapp3.1\staticwebassets\SaveMyMoney.Api.StaticWebAssets.Manifest.cache

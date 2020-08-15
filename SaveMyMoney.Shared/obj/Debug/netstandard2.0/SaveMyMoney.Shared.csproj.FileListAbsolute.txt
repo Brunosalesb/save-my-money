@@ -1,6 +1,7 @@
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Shared\bin\Debug\netstandard2.0\SaveMyMoney.Shared.deps.json
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Shared\bin\Debug\netstandard2.0\SaveMyMoney.Shared.dll
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Shared\bin\Debug\netstandard2.0\SaveMyMoney.Shared.pdb
+C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Shared\obj\Debug\netstandard2.0\SaveMyMoney.Shared.csprojAssemblyReference.cache
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Shared\obj\Debug\netstandard2.0\SaveMyMoney.Shared.AssemblyInfoInputs.cache
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Shared\obj\Debug\netstandard2.0\SaveMyMoney.Shared.AssemblyInfo.cs
 C:\Users\bruno\Documents\Projetos\SaveMyMoney\SaveMyMoney.Shared\obj\Debug\netstandard2.0\SaveMyMoney.Shared.csproj.CoreCompileInputs.cache

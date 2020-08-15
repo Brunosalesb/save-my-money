@@ -5,15 +5,17 @@ using System.Configuration;
 
 namespace SaveMyMoney.Infra.Contexts
 {
-    public class SaveMyMoneyDataContext : DbContext
+    public class DataContext : DbContext
     {
-        public SaveMyMoneyDataContext(DbContextOptions<SaveMyMoneyDataContext> options) : base(options) { }
+        public DataContext(DbContextOptions<DataContext> options) : base(options) { }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Transfer> Transfers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new UserMap());
+            modelBuilder.ApplyConfiguration(new TransferMap());
         }
     }
 }

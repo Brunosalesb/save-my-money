@@ -3,21 +3,50 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SaveMyMoney.Infra.Contexts;
 
 namespace SaveMyMoney.Infra.Migrations
 {
-    [DbContext(typeof(SaveMyMoneyDataContext))]
-    partial class SaveMyMoneyDataContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(DataContext))]
+    [Migration("20200815165608_v1")]
+    partial class v1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.7")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("SaveMyMoney.Domain.Entities.Transfer", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime?>("TransferDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("TransferType")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Value")
+                        .HasColumnType("Money");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId")
+                        .IsUnique();
+
+                    b.ToTable("Transfers");
+                });
 
             modelBuilder.Entity("SaveMyMoney.Domain.Entities.User", b =>
                 {
@@ -42,6 +71,15 @@ namespace SaveMyMoney.Infra.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("SaveMyMoney.Domain.Entities.Transfer", b =>
+                {
+                    b.HasOne("SaveMyMoney.Domain.Entities.User", "User")
+                        .WithOne("Transfer")
+                        .HasForeignKey("SaveMyMoney.Domain.Entities.Transfer", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("SaveMyMoney.Domain.Entities.User", b =>

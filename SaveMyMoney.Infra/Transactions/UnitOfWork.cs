@@ -5,9 +5,9 @@ namespace SaveMyMoney.Infra.Transactions
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly SaveMyMoneyDataContext _context;
+        private readonly DataContext _context;
 
-        public UnitOfWork(SaveMyMoneyDataContext context)
+        public UnitOfWork(DataContext context)
         {
             _context = context;
         }
