@@ -3,6 +3,7 @@ using SaveMyMoney.Domain.Commands.Responses.Transfers;
 using SaveMyMoney.Domain.Entities;
 using SaveMyMoney.Domain.Repos;
 using SaveMyMoney.Domain.Transactions;
+using System.Collections.Generic;
 
 namespace SaveMyMoney.Domain.Handlers
 {
@@ -26,7 +27,7 @@ namespace SaveMyMoney.Domain.Handlers
 
         public RegisterTransferResponse Post(RegisterTransferRequest req)
         {
-            var userId = 2;
+            var userId = 1;
             var transfer = new Transfer(req.Value, userId, req.TransferDate);
 
             _repo.Save(transfer);

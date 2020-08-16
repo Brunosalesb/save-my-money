@@ -1,7 +1,10 @@
-﻿using SaveMyMoney.Domain.Commands.Responses;
+﻿using Microsoft.EntityFrameworkCore;
+using SaveMyMoney.Domain.Commands.Responses;
 using SaveMyMoney.Domain.Entities;
 using SaveMyMoney.Domain.Repos;
 using SaveMyMoney.Infra.Contexts;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace SaveMyMoney.Infra.Repos
 {
@@ -16,7 +19,7 @@ namespace SaveMyMoney.Infra.Repos
 
         public Transfer GetById(int id)
         {
-            return _context.Transfers.Find(id);
+            return _context.Transfers.AsNoTracking().FirstOrDefault(x => x.Id == id);
         }
 
         public void Save(Transfer transfer)

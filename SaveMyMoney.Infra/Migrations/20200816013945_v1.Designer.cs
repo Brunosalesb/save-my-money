@@ -10,7 +10,7 @@ using SaveMyMoney.Infra.Contexts;
 namespace SaveMyMoney.Infra.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20200815165608_v1")]
+    [Migration("20200816013945_v1")]
     partial class v1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -28,6 +28,9 @@ namespace SaveMyMoney.Infra.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<DateTime>("RegisterDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<DateTime?>("TransferDate")
                         .HasColumnType("datetime2");
 
@@ -42,8 +45,7 @@ namespace SaveMyMoney.Infra.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId")
-                        .IsUnique();
+                    b.HasIndex("UserId");
 
                     b.ToTable("Transfers");
                 });
@@ -65,7 +67,7 @@ namespace SaveMyMoney.Infra.Migrations
                         .HasColumnType("nvarchar(32)")
                         .HasMaxLength(32);
 
-                    b.Property<DateTime>("SignUpDate")
+                    b.Property<DateTime>("RegisterDate")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -76,8 +78,8 @@ namespace SaveMyMoney.Infra.Migrations
             modelBuilder.Entity("SaveMyMoney.Domain.Entities.Transfer", b =>
                 {
                     b.HasOne("SaveMyMoney.Domain.Entities.User", "User")
-                        .WithOne("Transfer")
-                        .HasForeignKey("SaveMyMoney.Domain.Entities.Transfer", "UserId")
+                        .WithMany("Transfer")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

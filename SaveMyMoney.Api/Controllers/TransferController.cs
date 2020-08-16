@@ -35,7 +35,7 @@ namespace SaveMyMoney.Api.Controllers
 
         [Route("{id}")]
         [HttpGet]
-        public IActionResult Get([FromRoute] int id)
+        public IActionResult GetById([FromRoute] int id)
         {
             try
             {

@@ -20,6 +20,7 @@ namespace SaveMyMoney.Domain.Entities
         public DateTime? TransferDate { get; private set; }
         public DateTime RegisterDate { get; private set; }
         public ETransferType TransferType { get; private set; }
+
         public int UserId { get; private set; }
         public User User { get; private set; }
     }

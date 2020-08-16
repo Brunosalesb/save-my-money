@@ -17,7 +17,7 @@ namespace SaveMyMoney.Infra.Migrations
                     FirstName = table.Column<string>(maxLength: 32, nullable: true),
                     LastName = table.Column<string>(maxLength: 32, nullable: true),
                     Password = table.Column<string>(maxLength: 32, nullable: false),
-                    SignUpDate = table.Column<DateTime>(nullable: false)
+                    RegisterDate = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -32,6 +32,7 @@ namespace SaveMyMoney.Infra.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Value = table.Column<decimal>(type: "Money", nullable: false),
                     TransferDate = table.Column<DateTime>(nullable: true),
+                    RegisterDate = table.Column<DateTime>(nullable: false),
                     TransferType = table.Column<int>(nullable: false),
                     UserId = table.Column<int>(nullable: false)
                 },
@@ -49,8 +50,7 @@ namespace SaveMyMoney.Infra.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_Transfers_UserId",
                 table: "Transfers",
-                column: "UserId",
-                unique: true);
+                column: "UserId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

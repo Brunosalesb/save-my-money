@@ -14,7 +14,7 @@ namespace SaveMyMoney.Infra.Mappings
             builder.Property(x => x.RegisterDate).IsRequired();
             builder.Property(x => x.TransferType).IsRequired();
 
-            builder.HasOne(x => x.User).WithMany(y => y.Transfer).HasForeignKey(z => z.UserId);
+            builder.HasOne(x => x.User).WithMany(y => y.Transfer);
         }
     }
 }
