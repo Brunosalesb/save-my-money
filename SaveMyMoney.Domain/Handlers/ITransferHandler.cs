@@ -9,6 +9,6 @@ namespace SaveMyMoney.Domain.Handlers
     {
         RegisterTransferResponse Post(RegisterTransferRequest req);
         GetTransferResponse GetById(int id);
-        ICollection<Transfer> GetAll();
+        ICollection<GetTransferResponse> GetAll();
     }
 }

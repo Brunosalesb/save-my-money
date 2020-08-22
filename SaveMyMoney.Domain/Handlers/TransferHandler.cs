@@ -4,6 +4,7 @@ using SaveMyMoney.Domain.Entities;
 using SaveMyMoney.Domain.Repos;
 using SaveMyMoney.Domain.Transactions;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace SaveMyMoney.Domain.Handlers
 {
@@ -18,9 +19,9 @@ namespace SaveMyMoney.Domain.Handlers
             _unitOfWork = unitOfWork;
         }
 
-        public ICollection<Transfer> GetAll()
+        public ICollection<GetTransferResponse> GetAll()
         {
-            var transfer = _repo.GetAll();
+            var transfer = _repo.GetAll().Select(x => new GetTransferResponse(x)).ToList();
 
             return transfer;
         }
