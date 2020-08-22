@@ -17,6 +17,11 @@ namespace SaveMyMoney.Infra.Repos
             _context = context;
         }
 
+        public ICollection<Transfer> GetAll()
+        {
+            return _context.Transfers.AsNoTracking().ToList();
+        }
+
         public Transfer GetById(int id)
         {
             return _context.Transfers.AsNoTracking().FirstOrDefault(x => x.Id == id);

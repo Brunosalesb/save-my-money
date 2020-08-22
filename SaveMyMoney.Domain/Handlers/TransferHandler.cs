@@ -18,6 +18,13 @@ namespace SaveMyMoney.Domain.Handlers
             _unitOfWork = unitOfWork;
         }
 
+        public ICollection<Transfer> GetAll()
+        {
+            var transfer = _repo.GetAll();
+
+            return transfer;
+        }
+
         public GetTransferResponse GetById(int id)
         {
             var transfer = _repo.GetById(id);

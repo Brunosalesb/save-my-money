@@ -47,5 +47,20 @@ namespace SaveMyMoney.Api.Controllers
                 return BadRequest(ex);
             }
         }
+
+        [Route("")]
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            try
+            {
+                var response = _handler.GetAll();
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
+        }
     }
 }

@@ -10,5 +10,6 @@ namespace SaveMyMoney.Domain.Repos
     {
         void Save(Transfer transfer);
         Transfer GetById(int id);
+        ICollection<Transfer> GetAll();
     }
 }
