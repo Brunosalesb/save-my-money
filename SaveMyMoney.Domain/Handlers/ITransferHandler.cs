@@ -8,7 +8,9 @@ namespace SaveMyMoney.Domain.Handlers
     public interface ITransferHandler
     {
         RegisterTransferResponse Post(RegisterTransferRequest req);
-        GetTransferResponse GetById(int id);
         ICollection<GetTransferResponse> GetAll();
+        GetTransferResponse GetById(int id);
+        void Update(UpdateTransferRequest req);
+        void Delete(int id);
     }
 }

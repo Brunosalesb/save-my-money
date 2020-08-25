@@ -9,7 +9,9 @@ namespace SaveMyMoney.Domain.Repos
     public interface ITransferRepo
     {
         void Save(Transfer transfer);
-        Transfer GetById(int id);
         ICollection<Transfer> GetAll();
+        Transfer GetById(int id);
+        void Update(Transfer transfer);
+        void Delete(Transfer transfer);
     }
 }

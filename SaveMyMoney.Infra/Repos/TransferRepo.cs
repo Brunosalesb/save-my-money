@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SaveMyMoney.Domain.Commands.Responses;
 using SaveMyMoney.Domain.Entities;
 using SaveMyMoney.Domain.Repos;
 using SaveMyMoney.Infra.Contexts;
@@ -17,9 +16,14 @@ namespace SaveMyMoney.Infra.Repos
             _context = context;
         }
 
+        public void Delete(Transfer transfer)
+        {
+            _context.Transfers.Remove(transfer);
+        }
+
         public ICollection<Transfer> GetAll()
         {
-            return _context.Transfers.AsNoTracking().ToList();
+            return _context.Transfers.AsNoTracking().OrderByDescending(x => x.TransferDate).ToList();
         }
 
         public Transfer GetById(int id)
@@ -30,6 +34,11 @@ namespace SaveMyMoney.Infra.Repos
         public void Save(Transfer transfer)
         {
             _context.Transfers.Add(transfer);
+        }
+
+        public void Update(Transfer transfer)
+        {
+            _context.Entry(transfer).State = EntityState.Modified;
         }
     }
 }

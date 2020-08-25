@@ -1,8 +1,6 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using SaveMyMoney.Domain.Commands.Requests.Transfers;
 using SaveMyMoney.Domain.Handlers;
-using SaveMyMoney.Domain.Repos;
 using System;
 
 namespace SaveMyMoney.Api.Controllers
@@ -20,7 +18,7 @@ namespace SaveMyMoney.Api.Controllers
 
         [Route("")]
         [HttpPost]
-        public IActionResult Post([FromBody]RegisterTransferRequest req)
+        public IActionResult Post([FromBody] RegisterTransferRequest req)
         {
             try
             {
@@ -56,6 +54,36 @@ namespace SaveMyMoney.Api.Controllers
             {
                 var response = _handler.GetAll();
                 return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
+        }
+
+        [Route("{id}")]
+        [HttpDelete]
+        public IActionResult Delete([FromRoute] int id)
+        {
+            try
+            {
+                _handler.Delete(id);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
+        }
+
+        [Route("")]
+        [HttpPut]
+        public IActionResult Update([FromBody] UpdateTransferRequest req)
+        {
+            try
+            {
+                _handler.Update(req);
+                return Ok();
             }
             catch (Exception ex)
             {

@@ -19,6 +19,17 @@ namespace SaveMyMoney.Domain.Handlers
             _unitOfWork = unitOfWork;
         }
 
+        public void Delete(int id)
+        {
+            var transfer = _repo.GetById(id);
+            if (transfer == null)
+                return;
+
+            _repo.Delete(transfer);
+
+            _unitOfWork.Commit();
+        }
+
         public ICollection<GetTransferResponse> GetAll()
         {
             var transfer = _repo.GetAll().Select(x => new GetTransferResponse(x)).ToList();
@@ -43,6 +54,19 @@ namespace SaveMyMoney.Domain.Handlers
             _unitOfWork.Commit();
 
             return new RegisterTransferResponse(transfer);
+        }
+
+        public void Update(UpdateTransferRequest req)
+        {
+            var transfer = _repo.GetById(req.Id);
+            if (transfer == null)
+                return;
+
+            transfer.Update(req);
+
+            _repo.Update(transfer);
+
+            _unitOfWork.Commit();
         }
     }
 }
