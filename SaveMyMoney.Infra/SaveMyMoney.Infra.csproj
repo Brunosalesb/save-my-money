@@ -5,6 +5,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20200826205216_addWalletTable.cs" />
+    <Compile Remove="Migrations\20200826205216_addWalletTable.Designer.cs" />
+    <Compile Remove="Migrations\20200826210007_addWalletTable.cs" />
+    <Compile Remove="Migrations\20200826210007_addWalletTable.Designer.cs" />
+    <Compile Remove="Migrations\20200826210216_addWalletTable.cs" />
+    <Compile Remove="Migrations\20200826210216_addWalletTable.Designer.cs" />
+    <Compile Remove="Migrations\20200826210403_addWalletTable.cs" />
+    <Compile Remove="Migrations\20200826210403_addWalletTable.Designer.cs" />
+    <Compile Remove="Migrations\20200826210631_addWalletTable.cs" />
+    <Compile Remove="Migrations\20200826210631_addWalletTable.Designer.cs" />
+    <Compile Remove="Migrations\20200826210709_addWalletTable.cs" />
+    <Compile Remove="Migrations\20200826210709_addWalletTable.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.7">

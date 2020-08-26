@@ -25,8 +25,11 @@ namespace SaveMyMoney.Domain.Entities
         public DateTime RegisterDate { get; private set; }
         public ETransferType TransferType { get; private set; }
         public int UserId { get; private set; }
+        //public int WalletId { get; private set; }
 
         public User User { get; private set; }
+        //public Wallet Wallet { get; private set; }
+
         #endregion
 
         #region Methods

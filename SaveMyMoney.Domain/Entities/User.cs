@@ -22,5 +22,6 @@ namespace SaveMyMoney.Domain.Entities
         public DateTime RegisterDate { get; private set; }
 
         public List<Transfer> Transfer { get; private set; }
+        public Wallet Wallet { get; private set; }
     }
 }
