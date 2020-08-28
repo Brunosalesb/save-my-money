@@ -25,6 +25,19 @@ namespace SaveMyMoney.Infra.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Wallets",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Balance = table.Column<decimal>(type: "Money", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Wallets", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Transfers",
                 columns: table => new
                 {
@@ -34,23 +47,23 @@ namespace SaveMyMoney.Infra.Migrations
                     TransferDate = table.Column<DateTime>(nullable: true),
                     RegisterDate = table.Column<DateTime>(nullable: false),
                     TransferType = table.Column<int>(nullable: false),
-                    UserId = table.Column<int>(nullable: false)
+                    WalletId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Transfers", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Transfers_Users_UserId",
-                        column: x => x.UserId,
-                        principalTable: "Users",
+                        name: "FK_Transfers_Wallets_WalletId",
+                        column: x => x.WalletId,
+                        principalTable: "Wallets",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Transfers_UserId",
+                name: "IX_Transfers_WalletId",
                 table: "Transfers",
-                column: "UserId");
+                column: "WalletId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -60,6 +73,9 @@ namespace SaveMyMoney.Infra.Migrations
 
             migrationBuilder.DropTable(
                 name: "Users");
+
+            migrationBuilder.DropTable(
+                name: "Wallets");
         }
     }
 }

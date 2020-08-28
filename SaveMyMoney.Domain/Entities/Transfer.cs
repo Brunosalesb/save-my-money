@@ -6,12 +6,11 @@ namespace SaveMyMoney.Domain.Entities
 {
     public class Transfer
     {
-        #region constructors
+        #region Constructors
         protected Transfer() { }
-        public Transfer(decimal value, int userId, DateTime? transferDate)
+        public Transfer(decimal value, DateTime? transferDate)
         {
             Value = value;
-            UserId = userId;
             TransferDate = transferDate;
             RegisterDate = DateTime.Now;
             TransferType = Value >= 0 ? ETransferType.Profit : ETransferType.Loss;
@@ -24,11 +23,9 @@ namespace SaveMyMoney.Domain.Entities
         public DateTime? TransferDate { get; private set; }
         public DateTime RegisterDate { get; private set; }
         public ETransferType TransferType { get; private set; }
-        public int UserId { get; private set; }
-        //public int WalletId { get; private set; }
+        public int WalletId { get; private set; }
 
-        public User User { get; private set; }
-        //public Wallet Wallet { get; private set; }
+        public virtual Wallet Wallet { get; private set; }
 
         #endregion
 

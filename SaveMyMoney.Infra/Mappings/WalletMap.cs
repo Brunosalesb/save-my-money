@@ -11,7 +11,7 @@ namespace SaveMyMoney.Infra.Mappings
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Balance).HasColumnType("Money").IsRequired();
 
-            builder.HasOne(x => x.User).WithOne(y => y.Wallet);
+            builder.HasOne(x => x.User).WithOne(y => y.Wallet).HasForeignKey<Wallet>(z => z.UserId);
         }
     }
 }

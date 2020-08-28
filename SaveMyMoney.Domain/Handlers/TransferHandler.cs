@@ -46,8 +46,7 @@ namespace SaveMyMoney.Domain.Handlers
 
         public RegisterTransferResponse Post(RegisterTransferRequest req)
         {
-            var userId = 1;
-            var transfer = new Transfer(req.Value, userId, req.TransferDate);
+            var transfer = new Transfer(req.Value, req.TransferDate);
 
             _repo.Save(transfer);
 

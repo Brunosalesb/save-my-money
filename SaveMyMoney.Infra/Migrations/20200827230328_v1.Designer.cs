@@ -10,8 +10,8 @@ using SaveMyMoney.Infra.Contexts;
 namespace SaveMyMoney.Infra.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20200826210844_addWalletTable")]
-    partial class addWalletTable
+    [Migration("20200827230328_v1")]
+    partial class v1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -37,15 +37,15 @@ namespace SaveMyMoney.Infra.Migrations
                     b.Property<int>("TransferType")
                         .HasColumnType("int");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
                     b.Property<decimal>("Value")
                         .HasColumnType("Money");
 
+                    b.Property<int>("WalletId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("WalletId");
 
                     b.ToTable("Transfers");
                 });
@@ -85,22 +85,16 @@ namespace SaveMyMoney.Infra.Migrations
                     b.Property<decimal>("Balance")
                         .HasColumnType("Money");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("UserId")
-                        .IsUnique();
 
                     b.ToTable("Wallets");
                 });
 
             modelBuilder.Entity("SaveMyMoney.Domain.Entities.Transfer", b =>
                 {
-                    b.HasOne("SaveMyMoney.Domain.Entities.User", "User")
-                        .WithMany("Transfer")
-                        .HasForeignKey("UserId")
+                    b.HasOne("SaveMyMoney.Domain.Entities.Wallet", "Wallet")
+                        .WithMany("Transfers")
+                        .HasForeignKey("WalletId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -133,15 +127,6 @@ namespace SaveMyMoney.Infra.Migrations
                             b1.WithOwner()
                                 .HasForeignKey("UserId");
                         });
-                });
-
-            modelBuilder.Entity("SaveMyMoney.Domain.Entities.Wallet", b =>
-                {
-                    b.HasOne("SaveMyMoney.Domain.Entities.User", "User")
-                        .WithOne("Wallet")
-                        .HasForeignKey("SaveMyMoney.Domain.Entities.Wallet", "UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

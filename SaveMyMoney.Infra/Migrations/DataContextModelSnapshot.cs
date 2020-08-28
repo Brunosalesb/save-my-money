@@ -35,15 +35,15 @@ namespace SaveMyMoney.Infra.Migrations
                     b.Property<int>("TransferType")
                         .HasColumnType("int");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
                     b.Property<decimal>("Value")
                         .HasColumnType("Money");
 
+                    b.Property<int>("WalletId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("WalletId");
 
                     b.ToTable("Transfers");
                 });
@@ -96,9 +96,9 @@ namespace SaveMyMoney.Infra.Migrations
 
             modelBuilder.Entity("SaveMyMoney.Domain.Entities.Transfer", b =>
                 {
-                    b.HasOne("SaveMyMoney.Domain.Entities.User", "User")
-                        .WithMany("Transfer")
-                        .HasForeignKey("UserId")
+                    b.HasOne("SaveMyMoney.Domain.Entities.Wallet", "Wallet")
+                        .WithMany("Transfers")
+                        .HasForeignKey("WalletId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

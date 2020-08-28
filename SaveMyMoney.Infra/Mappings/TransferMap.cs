@@ -14,8 +14,7 @@ namespace SaveMyMoney.Infra.Mappings
             builder.Property(x => x.RegisterDate).IsRequired();
             builder.Property(x => x.TransferType).IsRequired();
 
-            builder.HasOne(x => x.User).WithMany(y => y.Transfer);
-            //builder.HasOne(x => x.Wallet).WithMany(y => y.Transfer).OnDelete(DeleteBehavior.NoAction).HasForeignKey(z => z.WalletId);
+            builder.HasOne(x => x.Wallet).WithMany(y => y.Transfers).HasForeignKey(z => z.WalletId);
         }
     }
 }
